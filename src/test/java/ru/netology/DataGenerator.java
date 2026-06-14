@@ -26,11 +26,12 @@ public class DataGenerator {
     }
 
     public static String generateName(Faker faker) {
-        return faker.name().lastName() + " " + faker.name().firstName();
+        String name = faker.name().lastName() + " " + faker.name().firstName();
+        return name.replace("ё", "е").replace("Ё", "Е");
     }
 
     public static String generatePhone(Faker faker) {
-        return faker.phoneNumber().phoneNumber();
+        return faker.numerify("+79#########");
     }
 
     public static class Registration {
@@ -54,5 +55,5 @@ public class DataGenerator {
         String city;
         String name;
         String phone;
-        }
+    }
 }
