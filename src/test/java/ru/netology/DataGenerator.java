@@ -41,7 +41,7 @@ public class DataGenerator {
         }
 
         public static UserInfo generateUser(String locale) {
-            faker = new Faker(new Locale(locale));
+            Faker faker = new Faker(new Locale(locale));
             return new UserInfo(
                     generateCity(),
                     generateName(faker),

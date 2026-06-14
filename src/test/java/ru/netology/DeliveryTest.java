@@ -22,7 +22,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 class DeliveryTest {
 
-    BeforeAll
+    @BeforeAll
     static void setUpAll() {
         Configuration.headless = true;
     }
