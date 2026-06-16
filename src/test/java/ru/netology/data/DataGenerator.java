@@ -1,4 +1,4 @@
-package ru.netology;
+package ru.netology.data;
 
 import com.github.javafaker.Faker;
 import lombok.Value;
@@ -26,12 +26,11 @@ public class DataGenerator {
     }
 
     public static String generateName(Faker faker) {
-        String name = faker.name().lastName() + " " + faker.name().firstName();
-        return name.replace("ё", "е").replace("Ё", "Е");
+        return faker.name().lastName() + " " + faker.name().firstName();
     }
 
     public static String generatePhone(Faker faker) {
-        return faker.numerify("+79#########");
+        return faker.phoneNumber().phoneNumber();
     }
 
     public static class Registration {
